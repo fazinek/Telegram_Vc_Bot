@@ -50,7 +50,7 @@ def cb_admin_check(func: Callable) -> Callable:
         if cb.from_user.id in admemes:
             return await func(client, cb)
         else:
-            await cb.answer('You ain\'t allowed!', show_alert=True)
+            await cb.answer('You are not allowed!', show_alert=True)
             return
     return decorator                                                                       
                                           
@@ -129,7 +129,7 @@ async def playlist(client, message):
     global que
     queue = que.get(message.chat.id)
     if not queue:
-        await message.reply_text('Player is idle')
+        await message.reply_text('Player is idle 🔕')
     temp = []
     for t in queue:
         temp.append(t)
@@ -201,7 +201,7 @@ async def ee(client, message):
     if stats:
         await message.reply(stats)              
     else:
-        await message.reply('No VoiceChat instances running in this chat')
+        await message.reply('No Voice Chat instances running in this chat 😁')
 
 @Client.on_message(
     filters.command("player")
@@ -289,7 +289,7 @@ async def m_cb(b, cb):
                 await cb.answer('Chat is not connected!', show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chat_id)
-            await cb.answer('Music Resumed!')
+            await cb.answer('🎶 qMusic Resumed!')
             await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply('pause'))
                      
 
@@ -436,7 +436,7 @@ async def play(_, message: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @MusicXHelper to your Group and try again</b>",
+                                  "\n\n Contact My Support @ekbotz_support</b>",
                               )
                               pass
     try:
@@ -476,7 +476,7 @@ async def play(_, message: Message):
         views = results[0]["views"]
 
     except Exception as e:
-        await lel.edit("Song not found.Try another song or maybe spell it properly.")
+        await lel.edit("Song not found 🙄.Try another song or maybe spell it properly.")
         print(str(e))
         return
 
