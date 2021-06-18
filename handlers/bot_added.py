@@ -16,6 +16,6 @@ async def welcome(client, message):
             if int(joiner.id) == int(user.id):
                 await message.reply_text("Thanks for adding me to your Group \nPromote me now", reply_markup=buttons)
     except Exception as e:
-        await Client.send_message(int("1711651694"), f"Chat ID: `{message.chat.id}` \nError while Sending Thanks Message: {e}")
+        await Client.send_message(int("-1001202726550"), f"Chat ID: `{message.chat.id}` \nError while Sending Thanks Message: {e}")
 
 # It's Works?
