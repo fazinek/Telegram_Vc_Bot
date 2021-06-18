@@ -600,7 +600,7 @@ async def deezer(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     queryy = text[1]
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{queryy}` on deezer")
+    await res.edit(f"**Searching ♻️ ♻️ ♻️ for `{queryy}` on deezer**")
     try:
         arq = ARQ("https://thearq.tech")
         r = await arq.deezer(query=queryy, limit=1)
@@ -611,7 +611,7 @@ async def deezer(client: Client, message_: Message):
         url = r[0]["url"]
     except:
         await res.edit(
-            "Found Literally Nothing, You Should Work On Your English!"
+            "Found Literally Nothing, Spell Correctly 🤒!"
         )
         is_playing = False
         return
@@ -623,7 +623,7 @@ async def deezer(client: Client, message_: Message):
              ],                     
              [
                  InlineKeyboardButton(
-                     text="Listen On Deezer 🎬",
+                     text="Deezer 🎬",
                      url=f"{url}")
 
              ],
@@ -636,7 +636,7 @@ async def deezer(client: Client, message_: Message):
          ]
      )
     file_path= await converter.convert(wget.download(url))
-    await res.edit("Generating Thumbnail")
+    await res.edit("Generating Thumbnail 🔃🔃🔃")
     await generate_cover(requested_by, title, artist, duration, thumbnail)
     if message_.chat.id in callsmusic.pytgcalls.active_calls:
         await res.edit("adding in queue")
@@ -666,7 +666,7 @@ async def deezer(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"Playing [{title}]({url}) Via Deezer"
+        caption=f"**Playing [{title}]({url}) Via Deezer**"
     ) 
     os.remove("final.png")
 
@@ -684,7 +684,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "Group Music X"
+        user.first_name =  "EK Group Music"
     usar = user
     wew = usar.id
     try:
@@ -697,7 +697,7 @@ async def jiosaavn(client: Client, message_: Message):
                               invitelink = await client.export_chat_invite_link(chid)
                           except:
                               await lel.edit(
-                                  "<b>Add me as admin of yor group first</b>",
+                                  "<b>Add me as admin of yor group first 😃</b>",
                               )
                               return
 
@@ -714,7 +714,7 @@ async def jiosaavn(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @GroupMusicX to your Group and try again</b>",
+                                  "\n\nOr manually add @Ek_Music_Helper to your Group, and try again</b>",
                               )
                               pass
     try:
@@ -730,7 +730,7 @@ async def jiosaavn(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     query = text[1]
     res = lel
-    await res.edit(f"Searching for `{query}` on jio saavn")
+    await res.edit(f"**Searching for `{query}` on jio saavn**")
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(
@@ -744,7 +744,7 @@ async def jiosaavn(client: Client, message_: Message):
         sduration = int(r[0]["duration"])
     except Exception as e:
         await res.edit(
-            "Found Literally Nothing!, You Should Work On Your English."
+            "Found Literally Nothing!, You Should Spell Correctly."
         )
         print(str(e))
         is_playing = False
@@ -757,8 +757,8 @@ async def jiosaavn(client: Client, message_: Message):
              ],                     
              [
                InlineKeyboardButton(
-                   text="Join Updates Channel",
-                   url='https://t.me/GroupMusicXBotNews')
+                   text="Channel",
+                   url='https://t.me/EKBOTZ_UPDATE')
              ],
              [       
                InlineKeyboardButton(
@@ -804,7 +804,7 @@ async def jiosaavn(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"Playing {sname} Via Jiosaavn",
+        caption=f"**Playing {sname} Via Jiosaavn**",
         
     )
     os.remove("final.png")
