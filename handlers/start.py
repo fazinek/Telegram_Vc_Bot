@@ -113,7 +113,7 @@ async def cb_handler(bot, update):
     if update.data == "help":
         await update.message.edit_text(
             text=HELP_TEXT,
-            reply_markup=HELP_BUTTONS,
+            reply_markup=HELP_BUTTON,
             disable_web_page_preview=True
         )
 
