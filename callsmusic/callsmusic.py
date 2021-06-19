@@ -15,7 +15,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-
+import config
 from pyrogram import Client
 from pytgcalls import PyTgCalls
 
